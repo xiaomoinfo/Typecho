@@ -39,7 +39,7 @@
             <span id="busuanzi_container_site_pv" style='display:none'>
                         <span id="site-visit">总访问数:
                             <span id="busuanzi_value_site_uv"></span>
-                        </span>
+                        </span><br>
                     </span>本站己运行<span id="day_count">222</span>天<span id="time_now">1</span>
                         </div>
 
@@ -61,8 +61,29 @@
             </div>
 		</div>
 	</div>
-</footer>
 
+</footer>
+    <script>
+        (function () {
+            function current() {
+                var d = new Date(), str = '';
+                str += d.getHours() + '小时';
+                str += d.getMinutes() + '分';
+                str += d.getSeconds() + '秒';
+                return str;
+            }
+
+            setInterval(function () {
+                $("#time_now").html(current)
+            }, 1000);
+
+            var dateFrom = new Date(2015, 9, 12);
+            var dateTo = new Date();
+            var diff = dateTo.valueOf() - dateFrom.valueOf();
+            var diff_day = parseInt(diff / (1000 * 60 * 60 * 24));
+            $("#day_count").html(diff_day);
+        })();
+    </script>
 <?php if (($this->options->tableOfContents == 'able') && ($this->is('post'))): ?>
 <div id="directory-content" class="directory-content">
     <div id="directory"></div>
@@ -343,28 +364,6 @@ InstantClick.on('change', function(isInitialLoad){
 InstantClick.init('mousedown');
 </script>
 
-
-    <script>
-        (function () {
-            function current() {
-                var d = new Date(), str = '';
-                str += d.getHours() + '小时';
-                str += d.getMinutes() + '分';
-                str += d.getSeconds() + '秒';
-                return str;
-            }
-
-            setInterval(function () {
-                $("#time_now").html(current)
-            }, 1000);
-
-            var dateFrom = new Date(2015, 9, 12);
-            var dateTo = new Date();
-            var diff = dateTo.valueOf() - dateFrom.valueOf();
-            var diff_day = parseInt(diff / (1000 * 60 * 60 * 24));
-            $("#day_count").html(diff_day);
-        })();
-    </script>
 
     <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
