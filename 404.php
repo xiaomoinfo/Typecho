@@ -1,33 +1,17 @@
-﻿<?php
-/**
- * The template for displaying 404 pages (not found).
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package Akina
- */
-
- ?>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title itemprop="name"><?php global $page, $paged;wp_title( '-', true, 'right' );
-bloginfo( 'name' );$site_description = get_bloginfo( 'description', 'display' );
-if ( $site_description && ( is_home() || is_front_page() ) ) echo " - $site_description";if ( $paged >= 2 || $page >= 2 ) echo ' - ' . sprintf( __( '第 %s 页'), max( $paged, $page ) );?>
-</title>
-<?php wp_head(); ?>
-</head>
-<body  oncontextmenu="return false" ondragstart="return false" <?php body_class(); ?>>
-<section class="error-404 not-found">
-<div class="error-img">
-<img src="<?php echo get_bloginfo('template_url'); ?>/images/404.png">
-</div>
-<div class="err-button back">
-<a id="golast" href=javascript:history.go(-1);>返回上一页</a>
-<a id="gohome" href="<?php bloginfo('url');?>">返回主页</a>  
-</div>
-</section>
-</body>
-
-
+﻿<?php get_header(); ?>
+    <div class="music-main">
+        <article id="post-0" class="post error404 no-results not-found music-c">
+            <header class="entry-header">
+                <h1 class="entry-title"><?php _e('有点尴尬诶。', 'amativeness'); ?></h1>
+            </header>
+            <div class="entry-content">
+                <p><?php _e('我们可能无法找到您需要的内容。或许搜索功能可以帮到您。', 'amativeness'); ?></p>
+                <?php get_search_form(); ?>
+            </div>
+            <!-- .entry-content -->
+        </article>
+        <!-- #post-0 -->
+    </div><!-- #content -->
+    </div><!-- #main .wrapper -->
+    </div>
+<?php get_footer(); ?>
