@@ -59,7 +59,7 @@
 <!-- color -->
 </script>
 <br />
-<a href="https://upyun.com" target="_blank"><img src="https://img.imiku.me/17-6-8/77836887.jpg" alt="upyun"></a>
+<a href="https://www.qiniu.com/" target="_blank"><img src="https://www.qiniu.com/wp-content/themes/Earthshaker-1/images/logo.png" alt="七牛云"></a>
 <style type="text/css" id="custom-background-css">
 body{ background-color: #f2f2f2; }
 @media(max-width:768px){
