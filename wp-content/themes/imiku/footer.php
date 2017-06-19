@@ -59,7 +59,7 @@
 <!-- color -->
 </script>
 <br />
-<a href="https://www.qiniu.com/" target="_blank"><img src="https://www.qiniu.com/wp-content/themes/Earthshaker-1/images/logo.png" alt="七牛云"></a>
+<a href="https://beian.aliyun.com/" target="_blank">浙ICP备15009606号</a>
 <style type="text/css" id="custom-background-css">
 body{ background-color: #f2f2f2; }
 @media(max-width:768px){
